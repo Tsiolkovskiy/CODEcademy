@@ -1,0 +1,26 @@
+class Media{
+  constructor(title){
+    this._title=title;
+    this._isCheckedout=false;
+    this._ratings=[];
+  }
+  get title(){
+    return this._title;
+    }
+    get isCheckedout(){
+      return this._isCheckedout;
+    }
+    get ratings() {
+      return this._ratings;
+    }
+   set isCheckedout(value) {
+    if (typeof value === 'boolean') {
+      this._isCheckedout = value;
+    } else {
+      console.error('Invalid value: isCheckedout must be a boolean');
+    }
+  }
+
+
+
+}
